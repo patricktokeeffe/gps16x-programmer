@@ -1,7 +1,7 @@
 # Garmin GPS16X-HVS Programming Adapter
 
-DIY field programming adapter for the [Garmin GPS16X-HVS]() GPS receiver. Use
-this with a portable computer running Windows&#8482; to upload new firmware.
+DIY field programming adapter for the [Garmin GPS16X-HVS](https://buy.garmin.com/en-US/US/p/13194)
+GPS receiver. Use this with a portable computer running Windows&#8482; to upload new firmware.
 
 
 ## Assembly
