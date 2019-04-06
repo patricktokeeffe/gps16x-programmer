@@ -8,6 +8,9 @@ this with a portable computer running Windows&#8482; to upload new firmware.
 
 ![Hardware diagram](block-diagram.png)
 
+![Photo](photo.jpg)
+
+
 ## Usage
 
 1. With programmer **off**, connect alligator clips to corresponding GPS wires,
