@@ -13,17 +13,28 @@ GPS receiver. Use this with a portable computer running Windows&#8482; to upload
 
 ## Usage
 
-1. With programmer **off**, connect alligator clips to corresponding GPS wires,
-   then turn unit on:
-    * Red - power in
-    * Black - power ground
+> *Required software is loaded onto a USB drive inside the programmer, but is
+> not present in this repository. See References below for download links.*
+
+1. Turn the GPS unit **off**
+2. Connect alligator clips to GPS data wires:
     * Blue - data in
     * White - data out
+2. Connect alligator clips to GPS power wires (or leave connected to existing
+   power supply):
     * Yellow - enable
-2. Plug USB cable into field computer
-    * Install the usb-serial adapter driver (may not be necessary): `CDM21228_Setup.zip`
+    * Red - power in
+    * Black - power ground
+3. Turn the GPS unit **on**:
+    * For built-in 9V supply, turn switch OFF &rarr; ON.
+    * For existing power supply, use established procedure
+2. Setup the computer:
+    * Plug USB cable into computer
+    * Install the usb-serial adapter driver, as necessary: `CDM21228_Setup.zip`
     * Install the new firmware package: `GPS16x_420.exe`
-3. Launch the sensor configuration tool: `SNSRXCFG_330.exe`
+3. Right-click `SNSRXCFG_330.exe` and choose **Launch as Administrator** (the
+   updater program will silently fail if not launched with admin rights), then
+   connect to the GPS:
     * Choose **GPS 16x** when prompted
     * Setup the serial port under *Comm* &rarr; *Setup*:
         * Serial Port: *look up correct port under Computer > Manage > Device
