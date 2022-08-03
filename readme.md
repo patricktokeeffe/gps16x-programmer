@@ -17,22 +17,22 @@ GPS receiver. Use this with a portable computer running Windows&#8482; to upload
 > not present in this repository. See References below for download links.*
 
 1. Turn the GPS unit **off**
-2. Connect alligator clips to GPS data wires:
+1. Connect alligator clips to GPS data wires:
     * Blue - data in
     * White - data out
-2. Connect alligator clips to GPS power wires (or leave connected to existing
-   power supply):
+1. Connect alligator clips to GPS power wires (or leave connected to existing
+   power supply&dagger;):
     * Yellow - enable
     * Red - power in
     * Black - power ground
-3. Turn the GPS unit **on**:
+1. Turn the GPS unit **on**:
     * For built-in 9V supply, turn switch OFF &rarr; ON.
     * For existing power supply, use established procedure
-2. Setup the computer:
+1. Setup the computer:
     * Plug USB cable into computer
     * Install the usb-serial adapter driver, as necessary: `CDM21228_Setup.zip`
     * Install the new firmware package: `GPS16x_420.exe`
-3. Right-click `SNSRXCFG_330.exe` and choose **Launch as Administrator** (the
+1. Right-click `SNSRXCFG_330.exe` and choose **Launch as Administrator** (the
    updater program will silently fail if not launched with admin rights), then
    connect to the GPS:
     * Choose **GPS 16x** when prompted
@@ -41,7 +41,13 @@ GPS receiver. Use this with a portable computer running Windows&#8482; to upload
           Manager > Ports (COM & LPT)*
         * Baud: leave as *Auto* or manually specify *38400*
     * Connect to the GPS using *Comm* &rarr; *Connect*
-4. Initiate the firmware upgrade using *Config* &rarr; *Update Software (F12)*
+1. To verify the current firmware version of the unit, enable the `PGRMT` sentence
+    * Open the *Config* &rarr; *NMEA Sentence Selection (F7)*
+    * Set `PGRMT` to *Enabled* and press *OK*
+    * Next use *Send the new configuration to the GPS (F9)*
+    * Now open *View* &rarr; *NMEA Transmitted Sentences*
+    * After verifying, reverse these steps to disable the `PGRMT` sentence again
+1. To initiate the firmware upgrade use *Config* &rarr; *Update Software (F12)*
     * Follow the instructions provided by the prompts
     * Select the region file provided with the firmware package
     * Select the updater program provided with the firmware package
@@ -51,6 +57,9 @@ GPS receiver. Use this with a portable computer running Windows&#8482; to upload
       > connect to the GPS unit.*
 5. Connect using the sensor config tool and verify settings match intended values.
 
+&dagger;Since the ground wire (black) is common for power and the serial port,
+it's important to avoid creating a ground loop. Either use a laptop computer
+running on battery power, or power the GPS receiver from a battery, or both.
 
 ## References
 
